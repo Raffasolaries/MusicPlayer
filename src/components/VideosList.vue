@@ -9,7 +9,11 @@
             </v-progress-circular>
         </div>
     </v-container>
-    <v-container v-else grid-list-xl fluid>
+    <v-container 
+        v-else
+        grid-list-xl
+        fluid
+    >
         <v-layout wrap justify-center>
             <v-flex xs7 sm5 md4 lg4
                 v-for="(item, index) in wholeResponse"
@@ -21,7 +25,7 @@
                     class="d-flex flex-column"
                 >
                     <v-row
-                        v-for="n in 3"
+                        v-for="n in 6"
                         :key="n"
                     >
                         <v-col
@@ -35,11 +39,9 @@
                             cols="9"
                         >
                             <v-card-subtitle>
-                                <div>
-                                    <h2
-                                        class="subtitle"
-                                    >{{item.snippet.title}}</h2>
-                                </div>
+                                <h2
+                                    class="subtitle"
+                                >{{item.snippet.title}}</h2>
                             </v-card-subtitle>
                         </v-col>
                         <v-col
@@ -47,7 +49,7 @@
                         >
                            <v-card-actions class="align-right">
                                 <v-btn icon
-                                    @click="singleMovie(item.contentDetails.videoId)"
+                                    @click="singleVideo(item.contentDetails.videoId)"
                                 >
                                     <!-- <v-icon v-html="'$vuetify.icons.play'"></v-icon> -->
                                     <v-img src="@/assets/images/play_button.svg"></v-img>
@@ -85,8 +87,8 @@ export default {
         });
   },
   methods: {
-    singleMovie (id) {
-      this.$router.push('/movie/' + id)
+    singleVideo (id) {
+      this.$router.push('/video/' + id)
     }
   }
 }

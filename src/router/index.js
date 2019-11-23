@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import MoviesList from '@/components/MoviesList';
-import Movie from '@/components/Movie';
+import VideosList from '@/components/VideosList';
+import Video from '@/components/Video';
 
 Vue.use(VueRouter);
 
@@ -9,15 +9,15 @@ export default new VueRouter({
   routes: [
     {
         path: '/',
-        name: 'MoviesList',
+        name: 'VideosList',
         props: true,
-        component: MoviesList
+        component: VideosList
     },
     {
-        path: '/movie/:id',
-        name: 'Movie',
+        path: '/video/:id',
+        name: 'Video',
         props: true,
-        component: Movie
+        component: Video
     }
   ]
 })
