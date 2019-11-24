@@ -35,11 +35,21 @@ export default {
 };
 </script>
 <style>
+  @font-face {
+    font-family: Roboto;
+    src: url('./assets/fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf');
+  }
   .logo {
     margin-top: 4rem
   }
   .divide {
     margin-bottom: 7rem
+  }
+  .progress-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -50px 0px 0px -50px;
   }
   #background {
     background-image: url('./assets/images/main_bg.png');

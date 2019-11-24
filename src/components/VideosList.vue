@@ -97,10 +97,4 @@ export default {
     .subtitle {
         color: #50E3C2;
     }
-    .progress-circle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -50px 0px 0px -50px;
-    }
 </style>
