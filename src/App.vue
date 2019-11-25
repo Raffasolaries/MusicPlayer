@@ -19,18 +19,15 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld';
+/* import VideosList from '@/components/VideosList';
+import Video from '@/components/Video';
+import App from './App' */
 
 export default {
   name: 'App',
-  components: {},
-  props: {
-  },
+  props: {},
   data: () => ('async', {
-    // itemsPerPageOptions: [4, 8, 12],
-    image: './assets/images/main_bg.png',
-    totalItems: 0,
-    itemsPerPage: 0,
-    items: []
+    image: './assets/images/main_bg.png'
   })
 };
 </script>
@@ -44,12 +41,6 @@ export default {
   }
   .divide {
     margin-bottom: 7rem
-  }
-  .progress-circle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: -50px 0px 0px -50px;
   }
   #background {
     background-image: url('./assets/images/main_bg.png');

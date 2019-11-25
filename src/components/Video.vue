@@ -1,14 +1,5 @@
 <template>
-  <v-container v-if="loading">
-      <div class="progress-circle">
-          <v-progress-circular
-              indeterminate
-              :size="150"
-              :width="8"
-              color="#50E3C2">
-          </v-progress-circular>
-      </div>
-  </v-container>
+  <Loading v-if="loading"/>
   <v-container v-else fluid>
     <v-layout 
       wrap
@@ -75,9 +66,14 @@
 <script>
 import axios from 'axios'
 import moment from 'moment'
+import Loading from './Loading.vue';
 
 export default {
+  name: 'Video',
   props: ['id'],
+  components: {
+    Loading
+  },
   data () {
     return {
       singleVideo: null,
